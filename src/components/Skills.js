@@ -8,7 +8,6 @@ const skillsData = {
     { name: "JavaScript", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" },
     { name: "Jquery", logo: "https://w7.pngwing.com/pngs/606/221/png-transparent-jquery-original-logo-icon.png"},
     { name: "React", logo: "https://cdn-icons-png.flaticon.com/512/1126/1126012.png" },
-    { name: "Django", logo: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png" },
   ],
   "Back-End": [
     { name: "C", logo: "https://www.kindpng.com/picc/m/403-4039227_c-language-logo-png-transparent-png.png"},

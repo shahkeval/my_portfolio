@@ -22,6 +22,46 @@ body {
     animation: fadeInUp 1.5s ease-out forwards;
   }
   
+  .about-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .icon {
+    font-size: 30px;
+    color: #333;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .icon:hover {
+    transform: scale(1.2);
+    color: #0073b1; /* Default LinkedIn blue */
+  }
+  
+  .linkedin:hover {
+    color: #0077b5;
+  }
+  
+  .github:hover {
+    color: #333;
+  }
+  
+  .email:hover {
+    color: #d14836;
+  }
+  
+  .instagram:hover {
+    color: #c13584;
+  }
+  
+
   .about-page h1 {
     font-size: 3rem;
     margin-bottom: 1.5rem;
@@ -36,7 +76,7 @@ body {
   }
   
   .about-page {
-    margin-top: 70px;
+    margin-top: 20px;
     max-width: 1500px;
     text-align: left;
     padding: 2rem;
@@ -60,7 +100,7 @@ body {
   /* Add custom bullets using pseudo-elements */
   .about-page p {
     position: relative;
-    font-size: 1.1rem;
+    font-size: 1PX;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     padding-left: 2rem; /* Space for the bullet */
@@ -79,7 +119,7 @@ body {
   
 
   .about-page p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: #e0e0e0;
     margin-bottom: 2rem;

@@ -1,5 +1,7 @@
 import React from "react";
 import "./About.css";
+// Import icons from a library like Font Awesome
+import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -14,8 +16,8 @@ const About = () => {
         proficient in Python, Django, Node.js, Express.js, PHP, Laravel, C, C++,
         C#, Java, and database technologies such as SQL and MongoDB, ensuring
         robust and efficient server-side architecture.
-      
-      
+      </p>
+      <p>
         My passion for innovation extends to the field of machine learning,
         where I leverage tools like Python, R Programming, and MATLab to build
         intelligent systems and predictive models.
@@ -34,6 +36,39 @@ const About = () => {
         I aim to create impactful software that bridges the gap between
         functionality and innovation.
       </p>
+      {/* Social Media Icons Section */}
+      <div className="social-icons">
+        <a
+          href="https://www.linkedin.com/in/keval-shah-680087228/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin className="icon linkedin" />
+        </a>
+        <a
+          href="https://github.com/shahkeval"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <FaGithub className="icon github" />
+        </a>
+        <a
+          href="mailto:shahkeval7383@gmail.com"
+          aria-label="Email"
+        >
+          <FaEnvelope className="icon email" />
+        </a>
+        <a
+          href="https://www.instagram.com/keval_shah_401"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <FaInstagram className="icon instagram" />
+        </a>
+      </div>
     </div>
   );
 };
