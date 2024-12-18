@@ -1,0 +1,163 @@
+/* General Page Styling */
+.projects-page {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #1d2671, #c33764); /* Gradient background */
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Title Styling */
+.projects-page h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #ffd700;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  animation: slideInTop 1.2s ease-out;
+  position: relative;
+}
+
+.projects-page h1::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  margin: 10px auto;
+  background: linear-gradient(90deg, #ff6a00, #ffd700);
+  border-radius: 5px;
+}
+
+/* Project Container */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Project Card - Flip Effect */
+.project-card {
+  perspective: 1000px; /* Perspective for 3D flip */
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border-radius: 15px;
+}
+
+.project-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.project-card:hover .project-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front Side */
+.project-front,
+.project-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Front Side Content */
+.project-front {
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffd700;
+}
+
+.project-front img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-bottom: 3px solid #ffd700;
+}
+
+.project-front h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+/* Back Side Content */
+.project-back {
+  background: rgba(0, 0, 0, 0.85);
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transform: rotateY(180deg);
+}
+
+.project-back p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.live-demo-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #ff6a00, #ffd700);
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.live-demo-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(255, 165, 0, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-page h1 {
+    font-size: 2.5rem;
+  }
+}

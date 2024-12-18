@@ -1,0 +1,102 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 10px 10%;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInNavbar 1s ease-out forwards; /* Fade-in animation */
+  }
+  
+  /* Left Section (Profile Image and Logo) */
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+
+  .navbar-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #0078ff;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-profile:hover {
+    transform: scale(1.1);
+  }
+  
+  .navbar-left h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  /* Right Section (Navbar Links) */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right a {
+    margin: 0 15px;
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-right a:hover {
+    color: #00d8ff;
+  }
+  
+  /* Like Button */
+  .like-button {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #ff5e57;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .like-button:hover {
+    transform: scale(1.2);
+  }
+  
+  .like-count {
+    margin-left: 5px;
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  /* Navbar Fade-In Animation */
+  @keyframes fadeInNavbar {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

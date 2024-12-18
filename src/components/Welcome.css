@@ -1,0 +1,135 @@
+/* Welcome Page Styling */
+
+.welcome-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #1d2671, #c33764); /* Gradient background */
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Left Section */
+.welcome-left {
+  flex: 1;
+  animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.welcome-left h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-left p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.welcome-left span {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.download-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(255, 106, 0, 0.5);
+}
+
+/* Right Section */
+.welcome-right {
+  flex: 1;
+  text-align: center;
+  animation: fadeInRight 1.5s ease-in-out;
+  position: relative;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  clip-path: ellipse(140px 160px at center);
+
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 2s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+.welcome-right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  width: 320px;
+  height: 360px;
+  clip-path: ellipse(140px 160px at center);
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0));
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Global Reset and Smooth Transitions */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #121212;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.welcome-container * {
+  transition: all 0.3s ease-in-out;
+}

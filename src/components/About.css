@@ -1,0 +1,200 @@
+/* Base styling for the About page */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #1d2671, #c33764); /* Gradient background */
+    color: #fff;
+    overflow-x: hidden;
+    height: 100vh;
+  }
+  
+  .about-page {
+    margin-top: 100px;
+    margin-left: 100px;
+    max-width: 1500px;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s ease-out forwards;
+  }
+  
+  .about-page h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #ffd700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 1s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  .about-page {
+    margin-top: 70px;
+    max-width: 1500px;
+    text-align: left;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    color: #e0e0e0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .about-page h1 {
+    font-size: 2.5rem;
+    color: #ffd700; /* Yellowish gold */
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Add custom bullets using pseudo-elements */
+  .about-page p {
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    padding-left: 2rem; /* Space for the bullet */
+    text-align: justify;
+  }
+  
+  .about-page p::before {
+    content: "➤"; /* Unicode arrow character */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff6a00; /* Stylish orange bullet */
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  
+
+  .about-page p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    text-align: justify;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-delay: 1s;
+  }
+  
+  /* Hover effect for interactive styling */
+  .about-page:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.03);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Underline accent for headings */
+  .about-page h1::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 5px;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    margin: 10px auto 0;
+    border-radius: 3px;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .about-page {
+      padding: 2rem 1rem;
+    }
+  
+    .about-page h1 {
+      font-size: 2.5rem;
+    }
+  
+    .about-page p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+/* Navbar Styling */
+.navbar {
+    position: fixed; /* Fix navbar position */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Fixed height for consistency */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Dark background */
+    color: #fff;
+    padding: 0 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Keep navbar on top */
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #ff6a00; /* Hover effect */
+  }
+  
+  /* Add consistent body padding to avoid content overlap */
+  body {
+    margin: 0;
+    padding-top: 60px; /* Add padding equal to navbar height */
+    font-family: "Poppins", sans-serif;
+  }
+  
