@@ -22,12 +22,21 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
+
+.user-image:hover {
+  transform: scale(1.1);
+}
+
+
+
 
 .navbar .logo {
   font-size: 1.5rem;
   color: #fff;
-  margin-right:950px ;
+  margin-right: 950px;
 }
 
 .navbar ul {
@@ -37,22 +46,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-.reset-button {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #ff6347;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.reset-button:hover {
-  background-color: #ff4500;
-}
-
 
 .navbar a {
   color: #fff;
@@ -73,4 +66,38 @@ body {
 
 .like-button:hover {
   transform: scale(1.1);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  animation: fadeIn 0.5s;
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.modal:hover .modal-image {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

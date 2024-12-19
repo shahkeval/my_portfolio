@@ -8,20 +8,19 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 
 function App() {
-  // Initialize likes count from localStorage
   const [likes, setLikes] = useState(() => {
     const savedLikes = localStorage.getItem("likes");
     return savedLikes ? parseInt(savedLikes) : 0;
   });
 
-  // Function to handle like button click
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleLike = () => {
     const newLikes = likes + 1;
     setLikes(newLikes);
-    localStorage.setItem("likes", newLikes); // Save new value to localStorage
+    localStorage.setItem("likes", newLikes);
   };
 
-  // Sync likes count from localStorage on page load
   useEffect(() => {
     const savedLikes = localStorage.getItem("likes");
     if (savedLikes) {
@@ -29,12 +28,21 @@ function App() {
     }
   }, []);
 
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <Router>
       <div className="App">
         <nav className="navbar">
           <div className="navbar-left">
-            <img src="nav_profile.jpg" alt="User" className="user-image" />
+            <img
+              src="nav_profile.jpg"
+              alt="User"
+              className="user-image"
+              onClick={toggleModal}
+            />
           </div>
           <div className="logo">MyPortfolio</div>
           <ul>
@@ -55,6 +63,12 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/experience" element={<Experience />} />
         </Routes>
+
+        {isModalOpen && (
+          <div className="modal" onClick={toggleModal}>
+            <img src="nav_profile.jpg" alt="Profile Enlarged" className="modal-image" />
+          </div>
+        )}
       </div>
     </Router>
   );
