@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+
 const app = express();
 
 app.use(cors());
@@ -13,20 +14,16 @@ const likesDatabase = {
 };
 
 // Middleware to get client IP
-// Middleware to get client IP
 const getClientIP = (req) => {
-    const ip = (
-      req.headers["x-forwarded-for"] || // For reverse proxies
-      req.connection.remoteAddress || 
-      req.socket.remoteAddress ||
-      req.ip || // Express's built-in IP detection
-      null
-    );
-  
-    // Clean up IPv6 loopback (::1) to avoid issues
-    return ip === "::1" ? "127.0.0.1" : ip;
-  };
-  
+  const ip = (
+    req.headers["x-forwarded-for"]?.split(",")[0] || 
+    req.connection.remoteAddress || 
+    req.socket.remoteAddress || 
+    req.ip || 
+    null
+  );
+  return ip === "::1" ? "127.0.0.1" : ip;
+};
 
 // Like Button API
 app.post("/api/like", (req, res) => {
@@ -36,7 +33,6 @@ app.post("/api/like", (req, res) => {
     return res.status(400).json({ message: "You have already liked!" });
   }
 
-  // Increment like count and save IP address
   likesDatabase.likeCount += 1;
   likesDatabase.ipAddresses.add(clientIP);
 
@@ -51,7 +47,6 @@ app.delete("/api/like", (req, res) => {
     return res.status(400).json({ message: "You haven't liked yet!" });
   }
 
-  // Decrement like count and remove IP address
   likesDatabase.likeCount -= 1;
   likesDatabase.ipAddresses.delete(clientIP);
 
@@ -64,7 +59,7 @@ app.get("/api/like", (req, res) => {
 });
 
 // Start server
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
