@@ -9,10 +9,9 @@ const Welcome = () => {
         <p>
           Hi, I’m a <span>Full-Stack Developer</span> who loves crafting beautiful and functional web applications. Let's build something amazing together!
         </p>
-        {/* Download Resume Button */}
         <a
-          href="/resume.pdf" // Access the file directly from the public folder
-          download="KevalShah_Resume.pdf" // Set the filename for the downloaded file
+          href="/Keval_Associate_Software_Engineer.pdf" 
+          download="KevalShah_Resume.pdf" 
           className="download-btn"
         >
           Download Resume
