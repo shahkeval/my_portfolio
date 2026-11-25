@@ -8,33 +8,26 @@ const About = () => {
     <div className="about-page">
       <h1>About Me</h1>
       <p>
-        I am a dedicated Full Stack Developer with a diverse skill set, spanning
-        front-end and back-end technologies, machine learning, and application
-        development. On the front-end, I bring expertise in HTML, CSS,
-        JavaScript, JQuery, and modern libraries like React, enabling me to
-        craft dynamic, user-friendly interfaces. For back-end development, I am
-        proficient in Python, Django, Node.js, Express.js, PHP, Laravel, C, C++,
-        C#, Java, and database technologies such as SQL and MongoDB, ensuring
-        robust and efficient server-side architecture.
+        I am a passionate Full-Stack Developer focused on building modern,
+        scalable, and user-friendly web, software, and mobile applications. I
+        have experience across both front-end and back-end ecosystems, working
+        with multiple frameworks, databases, and programming environments to
+        deliver end-to-end solutions.
       </p>
       <p>
-        My passion for innovation extends to the field of machine learning,
-        where I leverage tools like Python, R Programming, and MATLab to build
-        intelligent systems and predictive models.
+        Beyond development, I work with data visualization and business
+        intelligence tools to turn complex data into actionable insights. I
+        also build AI automation agents using platforms like n8n, Microsoft
+        Power Automate, Microsoft Copilot Studio and Microsoft Foundry, helping
+        businesses streamline processes through smart workflow automation.
       </p>
       <p>
-        This background allows me to integrate machine learning capabilities
-        into applications, enhancing their functionality and user experience.
-        Additionally, I have experience in mobile application development using
-        Kotlin, enabling me to design and develop high-performance apps for
-        Android platforms. With a focus on writing clean, maintainable code and
-        solving complex problems, I strive to deliver high-quality solutions
-        that meet both client and user needs.
+        Driven by innovation and real-world problem-solving, I specialize in
+        creating clean, functional, and dynamic applications, always striving
+        to deliver high-quality, impactful digital solutions.
       </p>
       <p>
-        By combining technical versatility with a drive for continuous learning,
-        I aim to create impactful software that bridges the gap between
-        functionality and innovation.
+        <em>“Innovation begins where problem-solving meets passion.”</em>
       </p>
       {/* Social Media Icons Section */}
       <div className="social-icons">

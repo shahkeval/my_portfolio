@@ -38,13 +38,13 @@ function App() {
         <nav className="navbar">
           <div className="navbar-left">
             <img
-              src="nav_profile.jpg"
+              src="/nav_profile.jpg"
               alt="User"
               className="user-image"
               onClick={toggleModal}
             />
           </div>
-          <div className="logo">MyPortfolio</div>
+          <div className="logo">Keval Shah</div>
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
@@ -66,7 +66,7 @@ function App() {
 
         {isModalOpen && (
           <div className="modal" onClick={toggleModal}>
-            <img src="nav_profile.jpg" alt="Profile Enlarged" className="modal-image" />
+            <img src="/nav_profile.jpg" alt="Profile Enlarged" className="modal-image" />
           </div>
         )}
       </div>

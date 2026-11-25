@@ -123,3 +123,22 @@
     font-size: 0.9rem;
   }
 }
+
+/* Detail bullet lists inside cards */
+.experience-page ul.detail-list {
+  list-style: disc;
+  display: block;
+  max-width: none;
+  margin: 10px 0 0;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.experience-page ul.detail-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.experience-page h1:not(:first-child) {
+  margin-top: 60px;
+}

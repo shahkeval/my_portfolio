@@ -238,3 +238,43 @@ body {
     font-family: "Poppins", sans-serif;
   }
   
+/* ---- Final layout overrides (centered, fits any zoom level) ---- */
+body {
+  height: auto;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+.about-page {
+  box-sizing: border-box;
+  width: calc(100% - 40px);
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 2rem 2.5rem;
+}
+
+.about-page:hover {
+  transform: none;
+}
+
+.about-page .icon {
+  color: #e0e0e0;
+  font-size: 32px;
+}
+
+.about-page .social-icons {
+  gap: 25px;
+}
+
+.about-page .icon.linkedin:hover { color: #0077b5; }
+.about-page .icon.github:hover { color: #ffffff; }
+.about-page .icon.email:hover { color: #ff6a5b; }
+.about-page .icon.instagram:hover { color: #e1306c; }
+
+@media (max-width: 768px) {
+  .about-page {
+    width: calc(100% - 20px);
+    margin: 20px auto;
+    padding: 1.5rem 1rem;
+  }
+}
