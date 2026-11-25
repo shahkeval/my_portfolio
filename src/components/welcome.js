@@ -10,7 +10,7 @@ const Welcome = () => {
           Hi, I’m Keval Shah, an <span>AI / ML Engineer &amp; Full Stack Developer</span> building scalable web applications and AI automation solutions. Let's build something amazing together!
         </p>
         <a
-          href="/resume.pdf"
+          href="/Keval_Shah_resume.pdf"
           download="Keval_Shah_resume.pdf"
           className="download-btn"
         >
