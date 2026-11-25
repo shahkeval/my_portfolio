@@ -11,7 +11,7 @@ const Welcome = () => {
         </p>
         <a
           href="/resume.pdf"
-          download="Keval_Shah_Resume.pdf"
+          download="Keval_Shah_resume.pdf"
           className="download-btn"
         >
           Download Resume
